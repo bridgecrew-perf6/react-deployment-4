@@ -1,0 +1,61 @@
+@import './assets/colors.scss';
+
+.app {
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    background-color: $color-gray-light;
+
+    display: flex;
+    justify-content: space-between;
+    .list {
+        margin: 15px 10px;
+        width: 47%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+
+        h3 {
+            align-self: center;
+            font-size: x-large;
+            border-bottom: 1px solid $color-black;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px 0px;
+            padding: 10px;
+
+            border-radius: 15px;
+
+            font-size: large;
+            color: darken($color-white, $amount: 5);
+            font-weight: 400;
+            background-color: darken($color-gray-light, $amount: 50);
+
+            button {
+                width: fit-content;
+                height: fit-content;
+
+                padding: 10px;
+                margin: 15px;
+                border-radius: 15px;
+                border: none;
+                outline: none;
+
+                &:hover {
+                    background-color: darken($color-gray-light, $amount: 25);
+                    color: $color-white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
